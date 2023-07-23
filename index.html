@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggel Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main" id="main">
+        <div id="toggle" class="circle"></div>
+    </div>
+
+    <div class="indicator">
+        <h1 id="show">off</h1>
+    </div>
+
+
+    <script>
+        var toggle = document.getElementById('toggle');
+        var show = document.getElementById('show');
+        var main = document.getElementById('main');
+
+
+        toggle.addEventListener('click', () => {
+
+            if (show.innerHTML == "off") {
+                document.body.style.background = 'red';
+                show.innerHTML = "on";
+                toggle.style.transform = "translatex(49px)"
+                main.style.background = "blue"
+            }
+            else {
+                document.body.style.background = 'black';
+                show.innerHTML = "off";
+                toggle.style.transform = "translatex(0)"
+                main.style.background = "gray"
+            }
+            
+        });
+    </script>
+</body>
+</html>
